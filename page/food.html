@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>系統分析</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style/main.css">
+
+    <!-- import jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="../js/my_jquery.js"></script>
+
+
+    <script>
+        var a = location.href.split('?')[1];
+        var produceName = a.split('&')[0].split('=')[1].split('%20');
+        var produceValue = a.split('&')[1].split('=')[1].split('%20');
+        var personalize = a.split('&')[2].split('=')[1].split('%20');
+        take_over_value(produceName, produceValue, personalize);
+        add_menu();
+    </script>
+</head>
+
+<body>
+
+    <div class="frame">
+        <!-- 側邊選單 -->
+        <div class="navigation">
+            <ul class="list">
+                <li>
+                    <a id='food' onclick='jumpValue("food")' href="./food.html">
+                        <span class="icon"><i class="fas fa-stroopwafel"></i></span>
+                        <span class="title">餐點</span>
+                    </a>
+                </li>
+                <li>
+                    <a id='drink' onclick='jumpValue("drink")' href="./drink.html">
+                        <span class="icon"><i class="fas fa-glass-cheers"></i></span>
+                        <span class="title">飲料</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- card -->
+        <div class="cardBox">
+            <div class="card" tabindex="0" role="button"
+                onclick="clickPictureB('IceCreamWaffle.jpg','冰淇淋鬆餅',['vanilla','chocolate'])">
+                <div class="picture"><img src="../Resources/IceCreamWaffle.jpg" alt="IceCreamWaffle"></div>
+                <div class="CardNames">冰淇淋鬆餅</div>
+                <div class="Numbers">$100</div>
+            </div>
+            <div class="card" onclick="clickPictureA('fruit_tower.png','綜合水果塔')">
+                <div class="picture"> <img src="../Resources/fruit_tower.png" alt="fruit_tower"></div>
+                <div class="CardNames">綜合水果塔</div>
+                <div class="Numbers">$100</div>
+            </div>
+            <div class="card" tabindex="0" role="button"
+                onclick="clickPictureB('Pie.jpg','甜點派',['strawberry','cantaloupe','blueberry','mango'])">
+                <div class="picture"><img src="../Resources/Pie.jpg" alt="Pie"> </div>
+                <div class="CardNames">甜點派</div>
+                <div class="Numbers">$40</div>
+            </div>
+            <div class="card" tabindex="0" role="button" onclick="clickPictureA('bree.jpg','布蕾')">
+                <div class="picture"><img src="../Resources/bree.jpg" alt="bree"> </div>
+                <div class="CardNames">布蕾</div>
+                <div class="Numbers">$50</div>
+            </div>
+            <div class="card" tabindex="0" role="button"
+                onclick="clickPictureB('cake.jpg','千層蛋糕',['chocolate','sea_salt_cream'])">
+                <div class="picture"> <img src="../Resources/cake.jpg" alt="cake"></div>
+                <div class="CardNames">千層蛋糕</div>
+                <div class="Numbers">$80</div>
+            </div>
+            <div class="card" tabindex="0" role="button"
+                onclick="clickPictureB('puff.jpg','泡芙',['original','chocolate'])">
+                <div class="picture"><img src="../Resources/puff.jpg" alt=""> </div>
+                <div class="CardNames">泡芙</div>
+                <div class="Numbers">$40</div>
+            </div>
+            <div class="card" tabindex="0" role="button"
+                onclick="clickPictureB('dount.jpg','甜甜圈',['original','chocolate','strawberry','milk'])">
+                <div class="picture"><img src="../Resources/dount.jpg" alt="dount"> </div>
+                <div class="CardNames">甜甜圈</div>
+                <div class="Numbers">$30</div>
+            </div>
+            <div class="card" tabindex="0" role="button"
+                onclick="clickPictureB('sundae.jpg','聖代',['caramel','chocolate','milk'])">
+                <div class="picture"><img src="../Resources/sundae.jpg" alt="sundae"> </div>
+                <div class="CardNames">聖代</div>
+                <div class="Numbers">$60</div>
+            </div>
+        </div>
+        <!-- result -->
+        <div class="resultBox">
+
+        </div>
+    </div>
+    <script>
+        add_menu();
+    </script>
+
+</body>
+
+</html>

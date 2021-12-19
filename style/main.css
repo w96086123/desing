@@ -1,0 +1,375 @@
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --brown: #e4b182;
+    --black: #000;
+    --right: #F3E3D5;
+}
+
+body {
+    background: url(../Resources/login_background.jpg);
+    background-size: cover;
+}
+
+/* 設定外框 */
+.frame {
+    /* backdrop-filter: blur(5px); */
+    background: white;
+    height: 587.4px;
+    margin-top: 13%;
+    display: flex;
+
+}
+
+.navigation {
+    background: var(--brown);
+    height: 100%;
+    width: 150px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+/* 設定列表 */
+
+.navigation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 142px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.navigation ul li:nth-child(3) {
+    margin-top: 250%;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.navigation ul li a .icon {
+    width: 80px;
+    height: 60px;
+    font-size: 1cm;
+    align-self: center;
+    color: var(--white);
+    line-height: 60px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    font-size: 25px;
+    color: var(--white);
+    align-self: center;
+}
+
+/* 設定滑鼠到列表時的型態 */
+.navigation ul li.hovered,
+.navigation ul li:hover {
+    background: var(--white);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.hovered a .icon,
+.navigation ul li:hover a .icon {
+    color: var(--black);
+}
+
+.navigation ul li.hovered a .title,
+.navigation ul li:hover a .title {
+    color: var(--black);
+}
+
+
+
+.navigation ul li.hovered a::before,
+.navigation ul li:hover a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+
+}
+
+.navigation ul li.hovered a::after,
+.navigation ul li:hover a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+
+}
+
+.navigation ul li:nth-child(1).hovered a::before,
+.navigation ul li:nth-child(1):hover a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px transparent;
+
+}
+
+.navigation ul li:nth-child(3).hovered a::after,
+.navigation ul li:nth-child(3):hover a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px transparent;
+
+}
+
+/*card*/
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-gap: 80px;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: 200px 200px;
+
+}
+
+.cardBox .card .picture {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.08);
+
+}
+
+.picture img {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.cardBox .card {
+    position: relative;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cardBox .card .CardNames {
+    margin: 5px;
+    font-size: 20px;
+    color: #000;
+}
+
+.cardBox .card .Numbers {
+    font-size: 20px;
+    color: #000;
+}
+
+/* card mouse move */
+
+.cardBox .card:hover {
+    background-color: var(--brown);
+}
+
+.card:hover .CardNames, .card:hover .Numbers {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* result */
+.resultBox {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 10px;
+    background-color: var(--right);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.resultMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+
+}
+
+/* tab effect transe page */
+
+
+/* alert css */
+
+.mark {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.right {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.button_frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left .picture {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+.button_frame button {
+    width: 50px;
+    height: 30px;
+}
+
+.button_frame input {
+    width: 50px;
+    height: 30px;
+}
+
+.resultMenu .checkout,
+.add,
+.check {
+    background-color: #28a745;
+    color: white;
+    border-color: transparent;
+}
+
+.mulit,
+.cancel {
+    background-color: #dc3545;
+    color: white;
+    border-color: transparent;
+}
+
+.resultMenu .checkout:hover,
+.add:hover, .check:hover {
+    background-color: #218838;
+}
+
+.mulit:hover,
+.cancel:hover {
+    background-color: #c82333;
+}
+
+.value_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.value_button button {
+    width: 25px;
+    height: 20px;
+}
+
+.value_button input {
+    width: 30px;
+    height: 20px;
+}
+
+.resultMenu .checkout {
+    font-size: 30px;
+    height: 50px;
+}
+
+.mark1 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+.mark1 .checkValue {
+    font-size: 30px;
+    text-align: center;
+}
+
+.mark1 .icon {
+    text-align: center;
+    font-size: 1.5cm;
+    color: #28a745;
+}
