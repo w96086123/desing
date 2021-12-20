@@ -16,8 +16,9 @@
         var a = location.href.split('?')[1];
         var produceName = a.split('&')[0].split('=')[1].split('%20');
         var produceValue = a.split('&')[1].split('=')[1].split('%20');
-        take_over_value(produceName, produceValue);
-
+        var personalize = a.split('&')[2].split('=')[1].split('%20');
+        take_over_value(produceName, produceValue, personalize);
+        add_menu();
     </script>
 
 
