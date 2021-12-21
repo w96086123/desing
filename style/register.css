@@ -18,7 +18,10 @@
 
 .entrance {
     margin: 5px;
-    width: 150px;
+    width: 100%;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
@@ -64,4 +67,37 @@ input {
     border: none;
     border-bottom: 2px solid black;
     color: #FFFFFF;
+}
+
+.p_frame {
+    width: 150px;
+    text-align: right;
+}
+
+.mark1 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #E6E0CA;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+.mark1 .checkValue {
+    font-size: 30px;
+    text-align: center;
+}
+
+.mark1 .icon {
+    text-align: center;
+    font-size: 1.5cm;
+    color: #28a745;
 }
